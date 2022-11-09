@@ -2,14 +2,13 @@ import { appState } from "../AppState.js"
 
 
 
-class SnackService {
+class MoneyService {
 
   addMoney() {
     appState.money = appState.money + .25
   }
-
 }
 
 
 
-export const snackService = new SnackService()
+export const moneyService = new MoneyService()

@@ -1,25 +1,24 @@
 import { appState } from "../AppState.js"
-import { snackService } from "../Services/SnackService.js"
-import { setText } from "../Utils/Writer.js"
+import { setHTML } from "../Utils/Writer.js"
 
 
 
-
-function _drawMoney() {
-  setText('money', appState.money)
+function _drawSnacks() {
+  let template = ''
+  appState.snacks.forEach(s => template += ` 
+      <div class="col-3 card text-center">
+        <p>${s.name}</p>
+        <p>${s.price}</p>
+      </div>
+  `)
+  setHTML('snack', template)
 }
+
 
 
 export class SnackController {
   constructor() {
-    appState.on('money', _drawMoney)
-    // _drawMoney
+    appState.on('snacks', _drawSnacks)
+    _drawSnacks()
   }
-
-  addMoney() {
-    console.log('gettin money')
-    snackService.addMoney()
-    console.log(appState.money)
-  }
-
 }

@@ -25,13 +25,20 @@
       </a>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
+  <main class="container-fluid">
+    <section>
       <div class="row justify-content-center">
-        <div class="col-4 btn btn-primary" onclick="app.snackController.addMoney()">Add .25</div>
-        <div class="col-2 text-primary" id="money">0</div>
+        <div class="col-4 btn btn-primary" onclick="app.moneyController.addMoney()">Add .25</div>
+        <div class="col-1 text-primary ts-3">$</div>
+        <div class="col-2 text-primary ts-3" id="money"></div>
       </div>
-    </div>
+    </section>
+    <section class="row justify-content-center" id="snack">
+      <!-- <div class="col-3 card text-center">
+        <p>Doritos</p>
+        <p>$3.75</p>
+      </div> -->
+    </section>
     </div>
   </main>
   <footer class="bg-dark text-light">

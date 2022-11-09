@@ -11,8 +11,8 @@ class AppState extends EventEmitter {
 
 
   snacks = [
-    new Snack('Doritos', 3.75),
-    new Snack('Flaming Hot Mtn Dew', 5.00)
+    new Snack('Doritos', 3.75, 'image url'),
+    new Snack('Flaming Hot Mtn Dew', 5.00, 'image url')
   ]
 
   money = 0
